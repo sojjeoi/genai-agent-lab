@@ -17,7 +17,7 @@ AI Agent 개발 과정을 5일 단위로 정리하고, 실습으로 직접 구�
 
 ---
 
-## 📌 소개
+## 소개
 
 AI Agent 개발 실전 과정(Python 기초 → OpenAI SDK → LangChain/RAG → LangGraph/Single Agent → Multi-Agent)을 수강한 뒤, 배운 내용을 스스로 복습하며 **개념 정리(`notes/`)** 와 **실습 코드(`practice/`)** 를 함께 기록한 저장소입니다.
 
@@ -26,11 +26,11 @@ AI Agent 개발 실전 과정(Python 기초 → OpenAI SDK → LangChain/RAG →
 
 | 구성 | 규모 |
 |---|---|
-| 📝 학습 노트 | Day별 5편 — 개념 설명, 비교표, 흔한 실수 정리 |
-| 💻 실습 노트북 | 19개 (Jupyter) |
-| 🖥️ 웹 앱 | Streamlit 앱 2종 (카카오 장소 추천, ChatPDF) |
+| 학습 노트 | Day별 5편 — 개념 설명, 비교표, 흔한 실수 정리 |
+| 실습 노트북 | 19개 (Jupyter) |
+| 웹 앱 | Streamlit 앱 2종 (카카오 장소 추천, ChatPDF) |
 
-## 🗺️ 학습 로드맵
+## 학습 로드맵
 
 단순 LLM 호출에서 시작해 RAG → 단일 Agent → 멀티 Agent로 한 단계씩 확장합니다.
 
@@ -52,7 +52,7 @@ flowchart LR
 
 ---
 
-## 📚 Day별 학습 내용 & 실습
+## Day별 학습 내용 & 실습
 
 ### Day 01 — Python 기초
 
@@ -103,9 +103,9 @@ Agent 개발에 필요한 Python 문법을 **"이 문법이 Agent의 어디에 �
 
 ```mermaid
 flowchart LR
-    A["📄 문서<br/>PDF · TXT"] --> B["Loader"] --> C["Splitter<br/>청킹"] --> D["Embedding"] --> E[("Vector DB<br/>Chroma")]
-    Q["❓ 질문"] --> R["Retriever"]
-    E --> R --> P["Prompt<br/>+ 검색 문서"] --> L["LLM"] --> O["💬 답변 + 출처"]
+    A["문서<br/>PDF · TXT"] --> B["Loader"] --> C["Splitter<br/>청킹"] --> D["Embedding"] --> E[("Vector DB<br/>Chroma")]
+    Q["질문"] --> R["Retriever"]
+    E --> R --> P["Prompt<br/>+ 검색 문서"] --> L["LLM"] --> O["답변 + 출처"]
 ```
 
 **실습**
@@ -175,7 +175,7 @@ flowchart TB
         direction LR
         U2["사용자 요청"] --> SV["Supervisor"]
         SV --> W1["Research<br/>Agent"] & W2["Writer<br/>Agent"] & W3["Code Agent<br/>E2B 샌드박스"]
-        W3 -. "실행 전 승인" .-> H["👤 Human"]
+        W3 -. "실행 전 승인" .-> H["Human"]
     end
 ```
 
@@ -190,7 +190,7 @@ flowchart TB
 
 ---
 
-## 🛠 기술 스택
+## 기술 스택
 
 | 분야 | 기술 |
 |---|---|
@@ -202,7 +202,7 @@ flowchart TB
 | 외부 도구·API | Exa 검색, E2B Code Interpreter, DuckDuckGo, OpenWeatherMap, 카카오 로컬, 고캠핑(공공데이터포털), pykrx |
 | UI | Streamlit |
 
-## 📁 폴더 구조
+## 폴더 구조
 
 ```
 genai-agent-lab/
@@ -223,7 +223,7 @@ genai-agent-lab/
 - **practice/**: 노트에 정리한 개념을 바탕으로 직접 코드를 작성하며 연습하는 공간입니다.
 - **projects/**: 연습한 내용을 응용해 직접 설계·구현한 프로젝트를 담습니다. 프로젝트마다 별도 README로 목적·구조·실행 방법을 기록합니다.
 
-## ⚙️ 실행 방법
+## 실행 방법
 
 **1. 가상환경 생성 및 패키지 설치**
 
@@ -262,7 +262,7 @@ jupyter notebook                                   # 실습 노트북
 streamlit run "practice/Day03_실습/chatpdf_app.py"  # ChatPDF 웹앱
 ```
 
-## ✍️ 업데이트 규칙
+## 업데이트 규칙
 
 - **항상 로컬에서만 수정합니다.** GitHub 웹 에디터로 직접 파일을 고치지 않습니다 (로컬과 원격이 어긋나 충돌이 생기는 걸 방지하기 위함).
 - 수정 후에는 아래 순서로 반영합니다:
